@@ -1,0 +1,11 @@
+<page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
+    <body>
+        <referenceBlock name="logo">
+            <arguments>
+              <argument name="logo_file" xsi:type="string">Magento_Theme/images/logo.png</argument>
+              <argument name="logo_img_width" xsi:type="number">238</argument>
+<argument name="logo_img_height" xsi:type="number">219</argument>
+            </arguments>
+        </referenceBlock>
+    </body>
+</page>

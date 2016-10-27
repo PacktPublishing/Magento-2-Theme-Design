@@ -1,0 +1,39 @@
+<?php
+/**
+ * Promo view template
+ *
+ * @var $block PacktPromoBlockPromo
+ */
+$productCollection = $block->getCategoryProducts(44);
+$mediaUrl = $block->getProductUrlImage();
+
+?>
+
+<h1 style="text-align:center;"><?php echo $block->getTitle(); ?></h1>
+<div class="wrapper">
+
+            <div class="jcarousel-wrapper">
+                <div class="jcarousel">
+                    <ul>
+                      <?php
+                        foreach ($productCollection as $product) {
+                          echo '<li><img src="' .
+                                $mediaUrl .
+                                $product->getData()['small_image'] .
+                                '" alt="Image 1"></li>';
+                        }
+                      ?>
+                    </ul>
+                </div>
+
+                <a href="#" class="jcarousel-control-prev">&lsaquo;</a>
+                <a href="#" class="jcarousel-control-next">&rsaquo;</a>
+
+                <p class="jcarousel-pagination"></p>
+            </div>
+        </div>
+<script>
+requirejs(['promo'], function(promo){
+  promo.promoBlock('.jcarousel', '.jcarousel-control-prev', '.jcarousel-control-next', '.jcarousel-pagination');
+});
+</script>
